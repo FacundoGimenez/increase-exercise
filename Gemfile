@@ -10,6 +10,8 @@ gem 'httparty', '~> 0.13.7'
 gem 'oj', '~> 3.11', '>= 3.11.2'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
+gem 'sidekiq-scheduler', '~> 3.0', '>= 3.0.1'
+gem 'sidekiq', '~> 6.1', '>= 6.1.3'
 gem 'sqlite3', '~> 1.4'
 
 group :development, :test do

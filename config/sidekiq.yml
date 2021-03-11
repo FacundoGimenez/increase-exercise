@@ -1,0 +1,5 @@
+:schedule:
+  fetch_transactions:
+    every: '10m'
+    class: FetchTransactionsJob
+    description: Get file.txt with transactions from increase API.
