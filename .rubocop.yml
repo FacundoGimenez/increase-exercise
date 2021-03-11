@@ -1,0 +1,38 @@
+require: rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'node_modules/**/*'
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - test/**/*
+
+Metrics/BlockLength:
+  Max: 35
+  Exclude:
+    - config/**/*
+
+Metrics/MethodLength:
+  Max: 40
+
+Style/Documentation:
+  Enabled: false
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
