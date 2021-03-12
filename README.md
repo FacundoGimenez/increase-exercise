@@ -1,24 +1,28 @@
-# README
+# Increase Exercise
+Una empresa de finanzas desea integrar su sistema de saldos de sus clientes a un sistema de
+transacciones. Dichas transacciones son obtenidas mediante una API que informa los últimos
+movimientos de las cuentas de los clientes.
+Los movimientos pueden estar aprobados (van a ser pagados) o rechazados (no se van a pagar
+al cliente) y se pagarán en una fecha en el futuro (entre 2 y 20 días en adelante).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+URL de la API de transacciones: https://increase-transactions.herokuapp.com/
 
-Things you may want to cover:
+Esta API consta de 2 endpoints:
+* GET /file.txt para obtener el archivo TXT que contiene las transacciones.
+* GET /clients/:id para obtener la información de los clientes.
 
-* Ruby version
+Para comunicarse con esta API es necesario enviar un token en el header Authorization con el
+valor Bearer 1234567890qwertyuiopasdfghjklzxcvbnm.
 
-* System dependencies
+Restricciones de la API:
+* El archivo que devuelve tiene la información de las transacciones ocurridas en los
+últimos 10 minutos.
+* La API utiliza un caché que expira cada 10 minutos, por lo tanto la información que no
+fue consumida en ese lapso se pierde.
 
-* Configuration
+# Instalacion
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* bundle install
+* rails db:create db:migrate
+* rails server
+* bundle exec sidekiq

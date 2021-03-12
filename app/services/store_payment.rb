@@ -7,6 +7,10 @@ class StorePayment < ApplicationService
   end
 
   def call
+    @payment = Payment.find_by(payment_id: @params[:payment_id])
+
+    return @payment if @payment
+
     @payment = Payment.create(
       payment_id: @params[:payment_id],
       payment_date: @params[:payment_date],
