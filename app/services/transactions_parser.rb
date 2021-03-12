@@ -21,6 +21,7 @@ class TransactionsParser < ApplicationService
           total_with_discounts: cleaned_line[65..77]
         }
       when 2
+        transactions_manager[:transactions] ||= []
         transactions_manager[:transactions] << {
           transaction_id: cleaned_line[1..32],
           amount: cleaned_line[33..45],

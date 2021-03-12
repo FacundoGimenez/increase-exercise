@@ -7,4 +7,6 @@ class Payment < ApplicationRecord
 
   validates :payment_id, :payment_date, :total_amount, :total_discounts,
             :total_with_discounts, :currency, presence: true
+
+  validates :payment_id, uniqueness: true
 end

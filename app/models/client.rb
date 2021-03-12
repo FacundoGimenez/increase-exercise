@@ -6,4 +6,6 @@ class Client < ApplicationRecord
 
   validates :client_id, :email, :first_name, :last_name, :job,
             :country, :address, :zip_code, :phone, presence: true
+
+  validates :client_id, uniqueness: true
 end
