@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FindClient
   extend ActiveSupport::Concern
 
@@ -9,6 +11,9 @@ module FindClient
     id = params[:id] || params[:client_id]
     @client = Client.find_by(client_id: id)
 
-    return render json: { message: 'We were not able to found any client that matches with the provided id.' }, status: 404 unless @client
+    return @client if @client
+
+    render json: { message: 'We were not able to found any client that matches with the provided id.' },
+           status: :not_found
   end
 end

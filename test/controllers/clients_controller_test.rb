@@ -34,7 +34,7 @@ class ClientsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'must get received_payments with result' do
-    @payment.update(payment_date: Time.zone.today - 2.year)
+    @payment.update(payment_date: Time.zone.today - 2.years)
 
     get received_payments_api_v1_client_path(id: @client.client_id), as: :json
 
