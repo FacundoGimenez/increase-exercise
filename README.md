@@ -25,4 +25,12 @@ fue consumida en ese lapso se pierde.
 * bundle install
 * rails db:create db:migrate
 * rails server
+* redis-server start
 * bundle exec sidekiq
+
+# Requirements
+
+* Ruby 2.7.1
+* Rails 6.0.3.5
+* Redis server v=4.0.9
+* Sidekiq 6.1.3
