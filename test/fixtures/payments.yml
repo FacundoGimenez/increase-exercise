@@ -1,0 +1,22 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  payment_id: "f3489678ad784c1eb52c96d657137c7g"
+  payment_date: 2021-03-12
+  total_amount: "0000075849621"
+  total_discounts: "0000000147526"
+  total_with_discounts: "0000012874596"
+  currency: "001"
+  client_id: 1
+  id: 1
+
+two:
+  payment_id: "f4489678ad784c1eb52c96d657137c7p"
+  payment_date: 2021-03-12
+  total_amount: "0000052672452"
+  total_discounts: "0000000235526"
+  total_with_discounts: "0000012374636"
+  currency: "001"
+  client_id: 1
+  id: 2
+
